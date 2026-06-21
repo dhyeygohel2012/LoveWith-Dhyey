@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: "export",
+  trailingSlash: true,
   basePath: isProd ? "/LoveWith-Dhyey" : undefined,
   images: {
     unoptimized: true,
