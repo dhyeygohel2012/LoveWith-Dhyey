@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blush-pink: #F8D7DA;
+  --color-baby-blue: #D6EAF8;
+  --color-lavender: #E8DAEF;
+  --color-cream: #FFF8E7;
+  --color-peach: #FAD7A0;
+  --color-mint-green: #D5F5E3;
+  --color-light-beige: #F8F5F2;
+  --color-soft-white: #FCFCFC;
+
+  --font-playfair: var(--font-playfair), serif;
+  --font-cormorant: var(--font-cormorant), serif;
+  --font-poppins: var(--font-poppins), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-caveat: var(--font-caveat), cursive;
+  --font-dancing: var(--font-dancing), cursive;
+}
+
+:root {
+  --background: #FCFCFC;
+  --foreground: #2d2d2d;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Styles */
+.glass {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(15, 15, 15, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(248, 215, 218, 0.2);
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F5F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8DAEF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D6EAF8;
+}
+
+/* Custom soft glow effect */
+.soft-glow {
+  box-shadow: 0 0 40px rgba(232, 218, 239, 0.6);
+}
+
+/* Custom paper scrapbook style */
+.scrapbook-paper {
+  background-color: #FFF8E7;
+  background-image: radial-gradient(#FAD7A0 0.5px, transparent 0.5px), radial-gradient(#FAD7A0 0.5px, #FFF8E7 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Keyframes for gentle floating animations */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-gentle 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.animate-float-slow {
+  animation: float-gentle 12s ease-in-out infinite;
+  animation-delay: 1s;
+}
